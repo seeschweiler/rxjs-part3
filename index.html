@@ -9,12 +9,27 @@
         body { font-family: 'Arial'; background: lightgray}
         ul { list-style-type: none; padding: 20px; }
         li { padding: 15px; background: lightcoral; margin-bottom: 10px; }
+        button { padding: 15px; }
+        .row { display: flex; }
+        .column { flex: 50%; }
     </style>
 </head>
 <body>
     <h1>RxJS Demo</h1>
-    <div>
-        <ul id="list"></ul>
+    <div class="row">
+        <div class="column">
+            <center>
+                <button id="unsubscribeBtn1">Unsubscribe</button>
+            </center>
+            <ul id="list1"></ul>
+        </div>
+        <div class="column">
+            <center>
+                <button id="unsubscribeBtn2">Unsubscribe</button>
+                <button id="addSubscriptionBtn">Add Subscription One</button>
+            </center>
+            <ul id="list2"></ul>
+        </div>
     </div>
     <script src="/bundle.js"></script>
 </body>
